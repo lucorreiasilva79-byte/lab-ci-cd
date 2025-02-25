@@ -41,7 +41,7 @@ Após ficar verde, clique em cima!
 
 ![](./img/009.png)
 
-010. Pesquise pelo serviço S3 e clique no serviço S3 *Scalable Storage in the cloud*.
+010. Pesquise pelo serviço S3 e clique no serviço S3 - *Simple Storage Service*.
 
 ![](./img/010.png)
 
@@ -51,11 +51,11 @@ Após ficar verde, clique em cima!
 
 012. Antes de criarmos o Bucket, precisaremos do ID da conta da AWS do nosso laboratório!
 
-Volte para o console do labotatório e clique em **AWS Details**, após clicar no botão irá exibir algumas informações da conta, vá até **AWSAccountId** e copie o **ID** da sua conta.
+Vá até o topo do console da AWS e clique na sua conta **voclabs/user2575295=gerson.carneiro...**, em **Account ID** copie o ID da sua conta. 
 
 ![](./img/012.png)
 
-013. Volte para o console da AWS que estávamos no passo [011], em **Bucket name**, coloque conforme abaixo (substitua pelo ID da sua conta), ficando da seguinte forma: *526926919628*-tfstate.
+013. No serviço **Bucket name**, coloque conforme abaixo (substitua pelo ID da sua conta), ficando da seguinte forma: *526926919628*-tfstate.
 
 Aqui estamos criando o bucket para armazenar o statefile da nossa infraestrutura que será provisionada.
 
@@ -112,6 +112,12 @@ Alguns links recomendados para iniciar a jornada no GitHub.
 ### Importando repositório da aula
 
 022. Agora que você já tem a conta no github, após efetuar o login, vá até o canto superior direito, clique em [+], em seguida clique em **Import repository**.
+
+> **Import vs fork** 
+> 
+> - **Import:** A importação geralmente se refere a trazer código de um repositório externo para um repositório existente ou para um novo repositório. Cria uma cópia completa e independente do repositório original em sua própria conta.
+> 
+> - **Fork:** Um fork cria uma cópia completa e independente do repositório original em sua própria conta. Essa cópia é um repositório separado, com seu próprio histórico de commits e branches. O fork é frequentemente usado para contribuir com projetos de código aberto. Você pode fazer alterações no seu fork e, em seguida, enviar um "pull request" para o repositório original, solicitando que suas alterações sejam incorporadas. O fork oferece isolamento, permitindo que você experimente e faça alterações sem afetar o repositório original.
 
 ![](./img/022.png)
 
@@ -272,7 +278,7 @@ Agora iremos utilizar o GitHub CodeSpaces para começar a construir o nosso work
 
 ![](./img/030.png)
 
-037. Seguindo a nossa estratégia de branchs (GitHub Workflow), iremos executar o comando do git para fazer o checkout em nossa branch de infra.
+037. Seguindo a nossa estratégia de branchs (GitHub Workflow), execute o comando do git para fazer o checkout na branch de infra.
 
 ```shell
 git checkout infra
@@ -280,7 +286,7 @@ git checkout infra
 
 ![](./img/031.png)
 
-038. Agora iremos realizar a criação do diretórios e arquivo para o nosso workflow `.github/workflows/infra.yml` 
+038. Execute o comando abaixo para criar os diretórios  `.github/workflows`  e arquivo `infra.yml`  para inserir o código do nosso workflow.
 
 ```shell
 mkdir -pv .github/workflows
@@ -290,6 +296,8 @@ touch .github/workflows/infra.yml
 ![](./img/032.png)
 
 039. Abra o arquivo `infra.yml` e cole o conteúdo abaixo para a criação do nosso workflow.
+
+Para mais informações sobre cada step do Github Actions: [Clique aqui!](./github-actions.md)
 
 ```yaml
 name: 'Terraform Infra'
@@ -303,6 +311,7 @@ env:
   TF_LINT_VERSION: v0.52.0
   DESTROY: false
   ENVIRONMENT: prod
+
 jobs:
   terraform:
     name: 'Deploy Infra'
@@ -412,6 +421,8 @@ jobs:
       if: env.DESTROY != 'true'
       run: terraform apply -auto-approve -input=false
 ```
+
+Ficando da seguinte forma:
 
 ![](./img/033.png)
 
@@ -610,6 +621,8 @@ subnets_id = [
   "subnet-06bf008b57618c9c8"
 ]
 ```
+
+Para mais informações sobre cada resource do Terraform, [Clique aqui!](./github-actions.md)
 
 052. Como já preenchemos todos os nossos arquivos do terraform e suas variáveis, iremos criar o último arquivo, o `.gitignore`
 
