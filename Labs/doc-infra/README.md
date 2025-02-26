@@ -622,7 +622,7 @@ subnets_id = [
 ]
 ```
 
-Para mais informações sobre cada resource do Terraform, [Clique aqui!](./github-actions.md)
+Para mais informações sobre cada resource do Terraform, [Clique aqui!](./terraform.md)
 
 052. Como já preenchemos todos os nossos arquivos do terraform e suas variáveis, iremos criar o último arquivo, o `.gitignore`
 
