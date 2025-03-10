@@ -238,9 +238,8 @@ Esse JSON define a task definition para o ECS.
 - Usa 512 CPU e 1024MB de RAM.
 - Utiliza o Fargate.
 
-### Resumo
-- Terraform: Provisiona ECS, Load Balancer, Security Groups e Logs no CloudWatch.
-- `terraform.tfvars`: Define as subnets utilizadas.
-- `ecs-task-definition.json`: Configura a execução do container no ECS.
+## **📌 Resumo**
 
-Se precisar de mais detalhes, me avise! 🚀
+✅ **Cria service do ecs**  
+✅ **Cria uma task definition** com os parametros da app.  
+✅ **Associa a service no Load Balancer** Para a aplicação ser acessada pelo dns do load balancer.  

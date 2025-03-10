@@ -3,7 +3,7 @@
 
 001. Para iniciar o nosso lab, será necessário logar no **AWS Academy**, clicando no link: [clique aqui!](https://www.awsacademy.com/vforcesite/LMS_Login), logo após clique em **Student Login**!
 
-![](./img/./img/001.png)
+![](./img/001.png)
 
 002. Realize o login na sua conta academica, em **Username**, insira o e-mail da sua conta (A conta que você se cadastrou no AWS Academy), e em **Password**, insira a senha que você cadstrou e por último, clique em **Log In** para acessar a conta.
 
@@ -19,7 +19,7 @@
 
 005. Clique em **Modules**.
 
-![](./img/Ci-CD/infra/img/005.png)
+![](./img/005.png)
 
 006. Desça até **AWS Academy Learner Lab**, e clique em  **Launch AWS Academy Learner Lab**.
 
@@ -67,7 +67,7 @@ Aqui estamos criando o bucket para armazenar o statefile da nossa infraestrutura
 
 015. Pronto, bucket criado!
 
-![](./img/Ci-CD/infra/img/015.png)
+![](./img/015.png)
 
 Agora que o **Bucket** foi criado, crie uma conta no github pois iremos utilizar alguns dos serviços do github neste laboratório, os principais serviços que utilizaremos são: repositório, github actions, codespaces e vscode web.
 
@@ -139,7 +139,7 @@ Aguarde alguns minutos até concluir a importação.
 
 ### Pipeline de infra
 
-![](./img/lab-infra.png)
+![](./img/cicd-infra.png)
 
 Neste primeiro workflow, iremos provisionar a da arquitetura apresentada em aula  na AWS utilizando Terraform, para automatizar este processo, iremos utilizar o GitHub Actions, neste workflow iremos utilizar o TFlint, TFsec, Terraform Docs.
 
@@ -230,39 +230,39 @@ Cole no valor na Secret, e clique em **Add Secret**.
 
 029. Crie a secret AWS_ACCOUNT_ID, clique no botão **New repository secret**
 
-![](./img/Ci-CD/infra/img/050.png)
+![](./img/050.png)
 
 Agora volte até o console da AWS, e copie o ID da conta.
 
-![](./img/./img/051.png)
+![](./img/051.png)
 
 Cole o ID da **Conta** na Secret, e clique em **Add Secret**.
 
-![](./img/./img/054.png)
+![](./img/054.png)
 
 Pronto! todas as secrets necessárias foram criadas!
 
 > Toda vez que o laboratório for desligado, será necessário reimportar os valores das secrets `AWS_ACCOUNT_ID, AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` e `AWS_SESSION_TOKEN`.
 
-![](./img/./img/055.png)
+![](./img/055.png)
 
 030. Agora será necessário adicionar qual será a nossa **Região** da AWS que iremos utilizar, mas ao invés de ser uma secret, será uma variável.
 
 Para adicionar a variável **AWS_REGION**, volte para o seu repositório e clique em **Settings**, **Secrets and variables** > **Actions** > Clique na aba **Variables** e por último clique em **New repository variable**, para adicionar a variável **AWS_REGION**.
 
-![](./img/./img/0054.png)
+![](./img/0054.png)
 
 031. Volte no console AWS, clique em região e copie a região que está utilizando (us-east-1).
 
-![](./img/./img/0055.png)
+![](./img/0055.png)
 
 032. Volte no GitHub e cole no valor da variável `AWS_REGION`, por último clique em **Add variable**.
 
-![](./img/./img/0056.png)
+![](./img/0056.png)
 
 Pronto! Variável adicionada com sucesso!
 
-![](./img/./img/0057.png)
+![](./img/0057.png)
 
 033. Ainda nas configurações do repositório (**Settings**), no menu esquerdo, clique em **Actions** em seguida **General**.
 
@@ -741,12 +741,12 @@ git commit -m "chore: create ci/cd infra"
 git push --set-upstream origin feature/init-infra
 ```
 
-![](./img/Ci-CD/infra/img/060.png)
+![](./img/060.png)
 
 
 059. Volte para o repositório do github, clique na aba **Pull requests**, e repare que terá um novo pull request: **feature/init-infra had recent pushes 2 minutes ago**, clique no botão **Compare & pull request**.
 
-![](./img/Ci-CD/infra/img/061.png)
+![](./img/061.png)
 
 060. Abra o pull request da branch **feature/init-infra** para branch **infra**.
 
