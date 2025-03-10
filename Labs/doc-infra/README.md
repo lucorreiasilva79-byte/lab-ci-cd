@@ -59,7 +59,7 @@ Vá até o topo do console da AWS e clique na sua conta **voclabs/user2575295=ge
 
 Aqui estamos criando o bucket para armazenar o statefile da nossa infraestrutura que será provisionada.
 
-![](./img/Ci-CD/infra/img/013.png)
+![](./img/013.png)
 
 014. Desça a página e clique em **Create bucket**.
 
@@ -206,7 +206,7 @@ Agora iremos repetir o mesmo processo para o restante das secrets!
 
 027. Crie a secret AWS_SECRET_ACCESS_KEY, clique no botão **New repository secret**
 
-![](./img/Ci-CD/infra/img/044.png)
+![](./img/044.png)
 
 Volte no console AWS academy e copie o valor aws_secret_access_key.
 
