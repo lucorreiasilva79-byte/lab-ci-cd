@@ -16,7 +16,6 @@ resource "aws_ecs_cluster" "this" {
 }
 ```
 
-
 ---
 
 2. Cria um Network Load Balancer (NLB)
