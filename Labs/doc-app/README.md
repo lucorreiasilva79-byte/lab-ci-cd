@@ -195,12 +195,12 @@ jobs:
 
 ![](./img/004.png)
 
-> Para mais informações sobre cada step do nosso workflow, [clique aqui!](./github-actions-build)
+> Para mais informações sobre cada step do nosso workflow, [clique aqui!](./github-actions.md)
 
 5. Crie os arquivos essenciais para o nosso projeto.
 
 ```shell
-mkdir -p app && touch app/{.dockerignore,Dockerfile,app.py,test.py,requirements.txt,sonar-project.properties}
+mkdir -p app && touch app/{.dockerignore,Dockerfile,app.py,test.py,requirements.txt,sonar-project.properties,docker-compose.yml}
 ```
 
 ![](./img/005.png)
@@ -334,26 +334,9 @@ services:
 
 Agora que incluiu todos os arquivos necessários e seus respectivos conteúdos, você irá testar a app localmente para verificar se está funcionando corretamente. Afinal precisa funcionar localmente (Elimina aquele problema de que só funciona na minha máquina rs).
 
-12. No arquivo `docker-compose.yml`, copie e cole o conteúdo abaixo.
+12. O arquivo `docker-compose.yml`, contém as informações necessárias para subirmos o nosso ambiente localmente.
 
-```docker-compose
-version: "3.8"
-
-services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: ci-cd-app:v1.0.0
-    container_name: ci-cd-app
-    restart: always
-    ports:
-      - "8000:8000"
-    environment:
-      - APP_ENV=production
-```
-
-13. Ao copiar o conteúdo, utilize o `docker-compose` para subir a sua aplicação localmente.
+13. Utilize o comando `docker-compose` para subir a sua aplicação localmente.
 
 ```bash
 cd app/ && docker compose up
