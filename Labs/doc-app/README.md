@@ -357,7 +357,12 @@ Pronto, tudo certo! Seu app está funcionando corretamente localmente! :)
 
 ![](./img/062.png)
 
-Agora que testou novamente,  iremos avançar para a configuração do próximo arquivo.
+Agora que testou novamente,  iremos avançar para a configuração do próximo arquivo, mas antes execute o comando para voltar para o diretório `app`.
+
+```shell
+cd ..
+```
+
 #### Sonar 
 
 Iremos preencher com as informações do SonarQube Cloud, que iremos abordar mais a frente.
