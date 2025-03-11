@@ -345,17 +345,17 @@ cd app/ && docker compose up
 Ao digitar o comando, a sua aplicação irá realizar o build da imagem e subir localmente.
 Repare que no canto inferior direito, abre sobe uma mensagem `Your application running on port 8000 is available. See all forwarded ports`, clique no botão **Open in Browser**.
 
-![](Ci-CD/app/img/060.png)
+![](./img/060.png)
 
 14. Ao clicar no botão, você será redirecionado para uma url que seu aplicativo que está sendo executado local sera exposto.
 
-![](Ci-CD/app/img/061.png)
+![](./img/061.png)
 
 Pronto, tudo certo! Seu app está funcionando corretamente localmente! :)
 
 15. Pra parar a execução localmente, pressione `CTRL + C`.
 
-![](Ci-CD/app/img/062.png)
+![](./img/062.png)
 
 Agora que testou novamente,  iremos avançar para a configuração do próximo arquivo.
 #### Sonar 
