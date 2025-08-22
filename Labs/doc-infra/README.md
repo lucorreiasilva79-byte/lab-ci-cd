@@ -587,7 +587,7 @@ output "nlb_dns_name" {
 049. Copie e cole o conteúdo abaixo no arquivo `versions.tf`.
 
 ```terraform
-xterraform {
+terraform {
   required_version = "1.10.5"
   required_providers {
     aws = {
@@ -787,11 +787,11 @@ Show! agora que temos a nossa infraestrutura necessária provisionada iremos seg
 
 ![](./img/071.png)
 
-067. Faça o pull request da branch `infra` para a branch `main` (Lembrando que é da esquerda para a direita), e por último clique em **Create pull request**.
+067. Faça o pull request da branch `fearture/init-infra` para a branch `infra` (Lembrando que é da esquerda para a direita), e por último clique em **Create pull request**.
 
 ![](./img/072.png)
 
-068. Clique em **Merge pull request**, para realizar a mesclagem da branch `infra` com a `main`.
+068. Clique em **Merge pull request**, para realizar a mesclagem da branch `fearture/init-infra` com a `infra`.
 
 ![](./img/073.png)
 
