@@ -787,11 +787,11 @@ Show! agora que temos a nossa infraestrutura necessária provisionada iremos seg
 
 ![](./img/071.png)
 
-067. Faça o pull request da branch `fearture/init-infra` para a branch `infra` (Lembrando que é da esquerda para a direita), e por último clique em **Create pull request**.
+067. Faça o pull request da branch `feature/init-infra` para a branch `infra` (Lembrando que é da esquerda para a direita), e por último clique em **Create pull request**.
 
 ![](./img/072.png)
 
-068. Clique em **Merge pull request**, para realizar a mesclagem da branch `fearture/init-infra` com a `infra`.
+068. Clique em **Merge pull request**, para realizar a mesclagem da branch `feature/init-infra` com a `infra`.
 
 ![](./img/073.png)
 
