@@ -4,6 +4,8 @@
   "cpu": "512",
   "memory": "1024",
   "requiresCompatibilities": ["FARGATE"],
+  "executionRoleArn": "arn:aws:iam::584767160170:role/LabRole",
+  "taskRoleArn": "arn:aws:iam::584767160170:role/LabRole",
   "containerDefinitions": [
     {
       "name": "ci-cd-app",
