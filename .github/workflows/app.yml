@@ -127,6 +127,11 @@ jobs:
         run: terraform validate
         working-directory: ./app/deploy
 
+      - name: Terraform | Creating and Update
+        if: env.DESTROY != 'true'
+        run: terraform apply -auto-approve -input=false
+        working-directory: ./app/deploy
+
       - name: Deploy App in Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
